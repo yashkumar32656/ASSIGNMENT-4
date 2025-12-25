@@ -1,0 +1,12 @@
+try:
+    file = open("sample.txt", "r")
+    print("Reading file content:")
+    count = 1
+    line = file.readline()
+    while line:
+        print("Line", count, ":", line.strip())  #strip( ) ---> This function remove the leading and trailing whitespace characters
+        count += 1
+        line = file.readline()
+    file.close()
+except FileNotFoundError:
+    print("Error: The file 'sample.txt' was not found.")
